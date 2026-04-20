@@ -1,0 +1,19 @@
+cat > Jenkinsfile << 'EOF'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build & Test') {
+            steps {
+                sh './gradlew clean test'
+            }
+        }
+    }
+
+    post {
+        always {
+            junit '**/build/test-results/test/TEST-*.xml'
+        }
+    }
+}
+EOF
