@@ -16,7 +16,7 @@ public class CalculatorAlgoTest {
         assertEquals("2 + 3 should be 5", 5, algo.add(2, 3));
     }
 
-    // ================== NOUVEAUX TESTS POUR LA MULTIPLICATION (Exemple 5 - TDD) ==================
+    // ================== TESTS MULTIPLICATION (Exemple 5 - TDD) ==================
     @Test
     public void shouldMultiplyPositiveNumbers() {
         assertEquals("2 * 3 should be 6", 6, algo.multiply(2, 3));
