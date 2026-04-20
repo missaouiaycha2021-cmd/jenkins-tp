@@ -1,20 +1,31 @@
 package epsi;
 
-import java.util.Collection;
+import java.util.List;
 
-/**
- * The Calculator class.
- *
- */
-public final class CalculatorService {
+public class CalculatorService {
+
+    private final CalculatorAlgo algo = new CalculatorAlgo();
 
     /**
-     * Adds two numbers.
-     * @param a the first number
-     * @param b the second number
-     * @return the result of a + b
+     * Additionne une liste de nombres en utilisant CalculatorAlgo
      */
-    public int add(Collection<Integer> numbers) {
-        return numbers.stream().reduce(0, CalculatorAlgo::add);
+    public int sum(List<Integer> numbers) {
+        if (numbers == null || numbers.isEmpty()) {
+            return 0;
+        }
+        // Correction : utilisation d'une lambda au lieu de method reference directe
+        return numbers.stream()
+                      .reduce(0, (a, b) -> algo.add(a, b));
+    }
+
+    /**
+     * Multiplication d'une liste de nombres (bonus, si présent dans ton fichier)
+     */
+    public int multiply(List<Integer> numbers) {
+        if (numbers == null || numbers.isEmpty()) {
+            return 0;
+        }
+        return numbers.stream()
+                      .reduce(1, (a, b) -> algo.multiply(a, b));
     }
 }
