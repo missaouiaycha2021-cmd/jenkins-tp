@@ -3,7 +3,7 @@ package epsi;
 public class CalculatorAlgo {
 
     public int add(int a, int b) {
-        return a + b;
+        return a * b;
     }
 
     // Squelette de multiplication pour l'Exemple 5 (TDD)
