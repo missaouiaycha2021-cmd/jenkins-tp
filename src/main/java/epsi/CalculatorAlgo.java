@@ -1,10 +1,3 @@
-cd ~/tp-jenkins
-
-# 1. Voir le contenu actuel du fichier (pour confirmation)
-cat src/main/java/epsi/CalculatorAlgo.java
-
-# 2. Remplacer tout le contenu par une version propre
-cat > src/main/java/epsi/CalculatorAlgo.java << 'EOF'
 package epsi;
 
 public class CalculatorAlgo {
@@ -13,10 +6,9 @@ public class CalculatorAlgo {
         return a + b;
     }
 
-    // === SQUELETTE MULTIPLICATION (Exemple 5 - TDD) ===
-    // On retourne 0 temporairement (les tests vont échouer)
+    // Squelette de multiplication pour l'Exemple 5 (TDD)
+    // Retourne 0 temporairement pour faire échouer les tests
     public int multiply(int a, int b) {
         return 0;
     }
 }
-EOF

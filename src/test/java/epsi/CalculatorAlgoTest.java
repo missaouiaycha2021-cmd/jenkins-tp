@@ -1,4 +1,3 @@
-cat > src/test/java/epsi/CalculatorAlgoTest.java << 'EOF'
 package epsi;
 
 import org.junit.Test;
@@ -16,7 +15,7 @@ public class CalculatorAlgoTest {
         assertEquals("2 + 3 should be 5", 5, algo.add(2, 3));
     }
 
-    // ================== TESTS MULTIPLICATION (Exemple 5 - TDD) ==================
+    // Tests pour la multiplication (Exemple 5)
     @Test
     public void shouldMultiplyPositiveNumbers() {
         assertEquals("2 * 3 should be 6", 6, algo.multiply(2, 3));
@@ -33,4 +32,3 @@ public class CalculatorAlgoTest {
         assertEquals("-2 * -3 should be 6", 6, algo.multiply(-2, -3));
     }
 }
-EOF
