@@ -14,6 +14,6 @@ public class App {
     }
 
     public static int compute( String[] args) {
-        return new CalculatorService().add(Arrays.asList(Integer.valueOf(args[0]), Integer.valueOf(args[1])));
+        return new CalculatorService().sum(Arrays.asList(Integer.valueOf(args[0]), Integer.valueOf(args[1])));
     }
 }
